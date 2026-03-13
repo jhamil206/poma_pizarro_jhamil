@@ -1,41 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Administrativo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Administrativo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
+
+  <!-- Encabezado -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-md-3 bg-light vh-100">
-                <nav class="nav nav-pills flex-column p-3">
-                    <a class="nav-link active" id="ventana1-tab" data-bs-toggle="tab" href="#ventana1" role="tab" aria-controls="ventana1" aria-selected="true">Ventana 1</a>
-                    <a class="nav-link" id="ventana2-tab" data-bs-toggle="tab" href="#ventana2" role="tab" aria-controls="ventana2" aria-selected="false">Ventana 2</a>
-                    <a class="nav-link" id="ventana3-tab" data-bs-toggle="tab" href="#ventana3" role="tab" aria-controls="ventana3" aria-selected="false">Ventana 3</a>
-                </nav>
-            </div>
-            <!-- Área de Contenido -->
-            <div class="col-md-9">
-                <div class="tab-content p-3">
-                    <div class="tab-pane fade show active" id="ventana1" role="tabpanel" aria-labelledby="ventana1-tab">
-                        <h1>Inicio Ventana 1</h1>
-                        <p>Contenido de la Ventana 1.</p>
-                    </div>
-                    <div class="tab-pane fade" id="ventana2" role="tabpanel" aria-labelledby="ventana2-tab">
-                        <h1>Inicio Ventana 2</h1>
-                        <p>Contenido de la Ventana 2.</p>
-                    </div>
-                    <div class="tab-pane fade" id="ventana3" role="tabpanel" aria-labelledby="ventana3-tab">
-                        <h1>Inicio Ventana 3</h1>
-                        <p>Contenido de la Ventana 3.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <span class="navbar-brand">Panel de Gestión</span>
+      <div class="d-flex">
+        <button class="btn btn-outline-light me-2"><i class="bi bi-bell"></i></button>
+        <button class="btn btn-outline-light"><i class="bi bi-person-circle"></i></button>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-3 col-lg-2 bg-dark text-white min-vh-100 p-3">
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link active mb-2" id="ventana1-tab" data-bs-toggle="tab" href="#ventana1" role="tab">
+            <i class="bi bi-speedometer2"></i> Dashboard
+          </a>
+          <a class="nav-link text-white mb-2" id="ventana2-tab" data-bs-toggle="tab" href="#ventana2" role="tab">
+            <i class="bi bi-people"></i> Usuarios
+          </a>
+          <a class="nav-link text-white mb-2" id="ventana3-tab" data-bs-toggle="tab" href="#ventana3" role="tab">
+            <i class="bi bi-gear"></i> Configuración
+          </a>
+        </nav>
+      </div>
+
+      <!-- Área de Contenido -->
+      <div class="col-md-9 col-lg-10">
+        <div class="tab-content p-4">
+          <!-- Ventana 1 -->
+          <div class="tab-pane fade show active" id="ventana1" role="tabpanel">
+            <h2 class="mb-4">Resumen General</h2>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card shadow-sm">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Usuarios Activos</h5>
+                    <p class="fs-3 text-primary fw-bold">120</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card shadow-sm">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Proyectos</h5>
+                    <p class="fs-3 text-success fw-bold">35</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card shadow-sm">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Tareas Pendientes</h5>
+                    <p class="fs-3 text-danger fw-bold">12</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ventana 2 -->
+          <div class="tab-pane fade" id="ventana2" role="tabpanel">
+            <h2 class="mb-4">Gestión de Usuarios</h2>
+            <p class="text-muted">Administra usuarios, roles y permisos.</p>
+            <button class="btn btn-primary"><i class="bi bi-person-plus"></i> Añadir Usuario</button>
+          </div>
+
+          <!-- Ventana 3 -->
+          <div class="tab-pane fade" id="ventana3" role="tabpanel">
+            <h2 class="mb-4">Configuración</h2>
+            <p class="text-muted">Opciones de personalización y ajustes del sistema.</p>
+            <button class="btn btn-secondary"><i class="bi bi-sliders"></i> Ajustes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
