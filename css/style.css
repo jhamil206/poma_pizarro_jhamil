@@ -1,1 +1,46 @@
-/* Estilos personalizados para el Laboratorio DPW2 */
+/* Estilos personalizados para el Dashboard */
+
+/* Móviles (max-width: 576px) */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  .sidebar {
+    display: none; /* Ocultar sidebar */
+  }
+  .content {
+    width: 100%; /* Contenido ocupa todo el ancho */
+  }
+}
+
+/* Tablets (577px a 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  body {
+    background-color: #e9ecef; /* Fondo gris claro */
+    font-size: 16px;
+  }
+  .sidebar {
+    width: 200px; /* Sidebar más estrecho */
+    background-color: #f8f9fa;
+  }
+  .content {
+    width: calc(100% - 200px);
+  }
+}
+
+/* PCs (min-width: 993px) */
+@media (min-width: 993px) {
+  body {
+    font-size: 18px;
+    background-color: #ffffff;
+  }
+  .sidebar {
+    width: 250px; /* Sidebar completo */
+  }
+  .content {
+    width: calc(100% - 250px);
+  }
+  .navbar-brand {
+    font-size: 1.5rem; /* Marca más grande */
+  }
+}
