@@ -6,25 +6,26 @@
     font-size: 14px;
   }
   .sidebar {
-    display: none; /* Ocultar sidebar */
+    height: auto; /* Sidebar se ajusta en altura */
+    width: 100%;  /* Ocupa todo el ancho */
   }
   .content {
-    width: 100%; /* Contenido ocupa todo el ancho */
+    width: 100%; /* Contenido debajo del sidebar */
   }
 }
 
 /* Tablets (577px a 992px) */
 @media (min-width: 577px) and (max-width: 992px) {
   body {
-    background-color: #e9ecef; /* Fondo gris claro */
+    background-color: #e9ecef;
     font-size: 16px;
   }
   .sidebar {
-    width: 200px; /* Sidebar más estrecho */
+    width: 30%; /* Sidebar más estrecho */
     background-color: #f8f9fa;
   }
   .content {
-    width: calc(100% - 200px);
+    width: 70%;
   }
 }
 
@@ -35,12 +36,12 @@
     background-color: #ffffff;
   }
   .sidebar {
-    width: 250px; /* Sidebar completo */
+    width: 25%; /* Sidebar completo */
   }
   .content {
-    width: calc(100% - 250px);
+    width: 75%;
   }
   .navbar-brand {
-    font-size: 1.5rem; /* Marca más grande */
+    font-size: 1.5rem;
   }
 }
