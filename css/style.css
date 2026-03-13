@@ -6,11 +6,11 @@
     font-size: 14px;
   }
   .sidebar {
-    height: auto; /* Sidebar se ajusta en altura */
-    width: 100%;  /* Ocupa todo el ancho */
+    width: 100%;  /* Sidebar ocupa todo el ancho arriba */
+    height: auto;
   }
   .content {
-    width: 100%; /* Contenido debajo del sidebar */
+    width: 100%;  /* Contenido debajo del sidebar */
   }
 }
 
